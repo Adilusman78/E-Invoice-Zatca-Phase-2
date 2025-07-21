@@ -9,7 +9,7 @@ page 70500 "Zatca Company Info"
     {
         area(Content)
         {
-            repeater(GroupName)
+            group(GroupName)
             {
                 field("Building No_DSSS"; rec."Building No_DSSS")
                 {

@@ -12,10 +12,10 @@ pageextension 70500 "CompanyInfo DSSS" extends "Company Information"
         }
     }
 
-    // actions
-    // {
-    //     // Add changes to page actions here
-    // }
+    actions
+    {
+
+    }
 
     var
 

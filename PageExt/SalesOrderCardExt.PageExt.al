@@ -5,38 +5,17 @@ pageextension 70506 SalesOrderCardExt extends "Sales Order"
         // Add changes to page layout here
         addafter(Control1900201301)
         {
-            group("ZATCA")
+            group("E-Invoice")
             {
                 field("E-Invoice Cleared By ZATCA"; Rec."E-Invoice Cleared By ZATCA")
                 {
                     ApplicationArea = All;
                     Editable = false;
                 }
-                field("E-Invoice Clearance Status"; Rec."E-Invoice Clearance Status")
-                {
-                    ApplicationArea = All;
-                    Editable = false;
-                }
-                field("E-Invoice ZATCA Pih Hash"; Rec."E-Invoice ZATCA Pih Hash")
-                {
-                    ApplicationArea = all;
-                    Editable = false;
-                }
-                field("ZATCA Invoice Response_DSSS"; ZATCAResponseTxt)
-                {
-                    Caption = 'Invoice Clearance Response';
-                    ApplicationArea = All;
-                    Editable = false;
-                    MultiLine = true;
-                }
-                field("E-Invoice ZATCA QR Code"; Rec."E-Invoice ZATCA QR Code")
-                {
-                    ApplicationArea = All;
-                }
+
 
             }
         }
-
 
     }
 
