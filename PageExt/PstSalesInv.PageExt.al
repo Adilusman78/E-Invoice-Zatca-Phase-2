@@ -87,54 +87,7 @@ pageextension 70502 "PstSalesInv" extends "Posted Sales Invoice"
             }
         }
     }
-    // local procedure ExportCustomerToXXML()
-    // var
-    //     TempBlob: Codeunit "Temp Blob";
-    //     xmlDoc: XmlDocument;
-    //     xmlDec: XmlDeclaration;
-    //     InvElem: XmlElement;
-    //     ProfileIdElem: XmlElement;
-    //     OutStream: OutStream;
-    //     InStream: InStream;
-    //    // TempFile: File;
-    //     fileName: Text;
-    // begin
-    //     xmlDoc := xmlDocument.Create();
-    //     xmlDec := xmlDeclaration.Create('1.0', 'UTF-8', '');
-    //     xmlDoc.SetDeclaration(xmlDec);
 
-
-    //     InvElem := xmlElement.Create('Invoice');
-
-    //     ProfileIdElem := XmlElement.Create('cbc:ProfileID');
-    //     ProfileIdElem.Add(xmlText.Create('reporting:1.0'));
-
-    //     InvElem.Add(ProfileIdElem);
-
-    //     xmlDoc.Add(InvElem);
-
-    //     // Create an outStream from the Blob, notice the encoding.
-    //     TempBlob.CreateOutStream(OutStream, TextEncoding::UTF8);
-
-    //     // Write the contents of the doc to the stream
-    //     xmlDoc.WriteTo(OutStream);
-
-    //     // From the same Blob, that now contains the XML document, create an inStr
-    //     TempBlob.CreateInStream(InStream, TextEncoding::UTF8);
-
-    //     fileName := 'T-' + Format(CurrentDateTime);
-    //     // Save the data of the InStream as a file.
-    //     File.DownloadFromStream(InStream, 'Export', '', '', fileName);
-    // end;
-
-    // trigger OnOpenPage()
-    // var
-    // begin
-    //     Clear(ShowEInvoicingPrints);
-
-    //     if (CompanyName = 'First Axel Last BU 24/3/21') or (CompanyName = 'First Axles Trading Co.') then
-    //         ShowEInvoicingPrints := true;
-    // end;
 
     var
     // ShowEInvoicingPrints: Boolean;

@@ -11,7 +11,7 @@ pageextension 70507 "BusManagerRoleCenter_Dsss" extends "Business Manager Role C
         // Add changes to page actions here
         addlast(Sections)
         {
-            group("E-Invoicing Zatca")
+            group("E-Invoicing ZATCA")
             {
                 action("E-Invoicing Zatca Setup")
                 {

@@ -24,6 +24,18 @@ pageextension 70506 SalesOrderCardExt extends "Sales Order"
         // Add changes to page actions here
         addafter("&Print")
         {
+            action("E-Invoice Order Information")
+            {
+                Caption = 'E-Invoice Order Information';
+                ApplicationArea = all;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                ToolTip = 'E-Invoice Order Information';
+                Image = Info;
+                RunObject = page "Zatca Sales Order Info";
+                RunPageLink = "Document Type" = field("Document Type"), "No." = field("No.");
+            }
             action("Export Order XML")
             {
                 Caption = 'Export Order XML';
@@ -44,7 +56,7 @@ pageextension 70506 SalesOrderCardExt extends "Sales Order"
             }
             action("Send XML - ZATCA")
             {
-                Caption = 'Send Invoice - ZATCA';
+                Caption = 'E-Invoice Send - ZATCA';
                 ApplicationArea = all;
                 Promoted = true;
                 PromotedIsBig = true;

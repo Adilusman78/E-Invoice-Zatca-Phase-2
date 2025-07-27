@@ -1,10 +1,9 @@
-page 70502 "Zatca Sales Order Info"
+page 70503 "Zatca Sales Credit Memo Info"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Sales Header";
-    Editable = false;
 
     layout
     {
@@ -12,7 +11,6 @@ page 70502 "Zatca Sales Order Info"
         {
             group(GroupName)
             {
-
                 field("E-Invoice Cleared By ZATCA"; Rec."E-Invoice Cleared By ZATCA")
                 {
                     ApplicationArea = All;
@@ -30,7 +28,7 @@ page 70502 "Zatca Sales Order Info"
                 }
                 field("ZATCA Invoice Response_DSSS"; ZATCAResponseTxt)
                 {
-                    Caption = 'E-Invoice Clearance Response';
+                    Caption = 'Invoice Clearance Response';
                     ApplicationArea = All;
                     Editable = false;
                     MultiLine = true;
@@ -39,11 +37,14 @@ page 70502 "Zatca Sales Order Info"
                 {
                     ApplicationArea = All;
                 }
-
-
             }
         }
+        area(Factboxes)
+        {
+
+        }
     }
+
     trigger OnOpenPage()
     begin
         ZATCAResponseTxt := Rec.GetZATCADescription();

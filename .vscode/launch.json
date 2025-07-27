@@ -7,7 +7,7 @@
             "type": "al",
             "environmentType": "Sandbox",
             //"environmentName": "Sandbox-230718135007",
-            "environmentName": "Sanbox-New",
+            "environmentName": "Sandbox-KSA",
             "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,

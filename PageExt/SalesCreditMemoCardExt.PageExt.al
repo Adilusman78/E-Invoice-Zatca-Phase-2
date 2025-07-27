@@ -10,27 +10,6 @@ pageextension 70508 SalesCreditMemoCardExt extends "Sales Credit Memo"
                 ApplicationArea = All;
                 Editable = false;
             }
-            field("E-Invoice Clearance Status"; Rec."E-Invoice Clearance Status")
-            {
-                ApplicationArea = All;
-                Editable = false;
-            }
-            field("E-Invoice ZATCA Pih Hash"; Rec."E-Invoice ZATCA Pih Hash")
-            {
-                ApplicationArea = all;
-                Editable = false;
-            }
-            field("ZATCA Invoice Response_DSSS"; ZATCAResponseTxt)
-            {
-                Caption = 'Invoice Clearance Response';
-                ApplicationArea = All;
-                Editable = false;
-                MultiLine = true;
-            }
-            field("E-Invoice ZATCA QR Code"; Rec."E-Invoice ZATCA QR Code")
-            {
-                ApplicationArea = All;
-            }
         }
     }
 
@@ -118,9 +97,21 @@ pageextension 70508 SalesCreditMemoCardExt extends "Sales Credit Memo"
             //         end;
             //     end;
             // }
+            action("E-Invoice Order Information")
+            {
+                Caption = 'E-Invoice Order Information';
+                ApplicationArea = all;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                ToolTip = 'E-Invoice Order Information';
+                Image = Info;
+                RunObject = page "Zatca Sales Credit Memo Info";
+                RunPageLink = "Document Type" = field("Document Type"), "No." = field("No.");
+            }
             action("Send XML - ZATCA")
             {
-                Caption = 'Send Invoice XML - ZATCA';
+                Caption = 'E-Invoice Send - ZATCA';
                 ApplicationArea = all;
                 //Visible=false;
                 Promoted = true;
