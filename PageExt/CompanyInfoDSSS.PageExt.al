@@ -14,7 +14,7 @@ pageextension 70500 "CompanyInfo DSSS" extends "Company Information"
 
     actions
     {
-        addafter(Action1030000)
+        addafter(Action27)
         {
             action("E-Invoice Comapny Information")
             {
@@ -28,7 +28,6 @@ pageextension 70500 "CompanyInfo DSSS" extends "Company Information"
                 RunObject = page "Zatca Company Info";
                 RunPageLink = Name = field(Name);
             }
-
         }
     }
 
