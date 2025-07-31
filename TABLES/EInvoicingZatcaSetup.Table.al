@@ -4,103 +4,103 @@ table 70502 "E-Invoicing Zatca Setup"
 
     fields
     {
-        field(70501; "Storage Account Name"; Code[50])
+        field(70501; "E-Invoice Storage Account Name"; Code[50])
         {
             DataClassification = ToBeClassified;
         }
-        field(70502; "Contaier Name"; Code[50])
+        field(70502; "E-Invoice Contaier Name"; Code[50])
         {
             DataClassification = ToBeClassified;
         }
-        field(70503; "Storage Account Access Key"; Text[2024])
+        field(70503; "E-Invoice Storage Account Access Key"; Text[2024])
         {
             DataClassification = ToBeClassified;
         }
-        field(70504; "HTTP Triger func. URL"; Text[2024])
+        field(70504; "E-Invoice HTTP Triger func. URL"; Text[2024])
         {
             DataClassification = ToBeClassified;
         }
-        field(70505; "ZATCA-Core URL"; Text[2024])
+        field(70505; "E-Invoice ZATCA-Core URL"; Text[2024])
         {
             DataClassification = ToBeClassified;
         }
-        field(70506; "ZATCA-Simulation URL"; Text[2024])
+        field(70506; "E-Invoice ZATCA-Simulation URL"; Text[2024])
         {
             DataClassification = ToBeClassified;
         }
-        field(70507; "ZATCA-File Name"; Code[20])
+        field(70507; "E-Invoice ZATCA-File Name"; Code[20])
         {
             DataClassification = ToBeClassified;
         }
-        field(70508; "ZATCA-Env. Simulation"; Text[2024])
+        field(70508; "E-Invoice ZATCA-Env. Simulation"; Text[2024])
         {
             DataClassification = ToBeClassified;
         }
-        field(70509; "ZATCA-Env. Production"; Text[2024])
+        field(70509; "E-Invoice ZATCA-Env. Production"; Text[2024])
         {
             DataClassification = ToBeClassified;
         }
-        field(70510; "Simulation Production CSID"; Blob)
+        field(70510; "E-Invoice Simulation Production CSID"; Blob)
         {
             DataClassification = ToBeClassified;
 
         }
-        field(70511; "Core Production CSID"; Blob)
+        field(70511; "E-Invoice Core Production CSID"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70512; "Simulation Production Secret"; Blob)
+        field(70512; "E-Invoice Simulation Production Secret"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70513; "Core Production Secret"; Blob)
+        field(70513; "E-Invoice Core Production Secret"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70514; "Simulation Compliance CSID"; Blob)
+        field(70514; "E-Invoice Simulation Compliance CSID"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70515; "Core Compliance CSID"; Blob)
+        field(70515; "E-Invoice Core Compliance CSID"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70516; "Simulation Compliance Secret"; Blob)
+        field(70516; "E-Invoice Simulation Compliance Secret"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70517; "Core Compliance Secret"; Blob)
+        field(70517; "E-Invoice Core Compliance Secret"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70518; "Simulation Private Key"; Blob)
+        field(70518; "E-Invoice Simulation Private Key"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70519; "Core Private Key"; Blob)
+        field(70519; "E-Invoice Core Private Key"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70520; "Simulation Certificate"; Blob)
+        field(70520; "E-Invoice Simulation Certificate"; Blob)
         {
             DataClassification = ToBeClassified;
         }
-        field(70521; "Core Certificate"; Blob)
+        field(70521; "E-Invoice Core Certificate"; Blob)
         {
             DataClassification = ToBeClassified;
         }
 
 
-        field(70522; "Organization"; Code[100])
+        field(70522; "E-Invoice Organization"; Code[100])
         {
             DataClassification = ToBeClassified;
             //  TableRelation = "Company Information".Name;
         }
-        field(70523; "LegalEntity"; Code[250])
+        field(70523; "E-Invoice LegalEntity"; Code[250])
         {
             DataClassification = ToBeClassified;
         }
-        field(70524; "PI Hash"; Text[250])
+        field(70524; "E-Invoice PI Hash"; Text[250])
         {
             DataClassification = ToBeClassified;
             Caption = 'Previous Invoice Hash';
@@ -110,7 +110,7 @@ table 70502 "E-Invoicing Zatca Setup"
 
     keys
     {
-        key(Key1; "Storage Account Name")
+        key(Key1; "E-Invoice Storage Account Name")
         {
             Clustered = true;
         }
@@ -155,63 +155,63 @@ table 70502 "E-Invoicing Zatca Setup"
         case FieldId of
             70510:
                 begin
-                    Clear("Simulation Production CSID");
-                    "Simulation Production CSID".CreateOutStream(OutStream, TextEncoding::UTF8);
+                    Clear("E-Invoice Simulation Production CSID");
+                    "E-Invoice Simulation Production CSID".CreateOutStream(OutStream, TextEncoding::UTF8);
                 end;
             70511:
                 begin
-                    Clear("Core Production CSID");
-                    "Core Production CSID".CreateOutStream(OutStream, TextEncoding::UTF8);
+                    Clear("E-Invoice Core Production CSID");
+                    "E-Invoice Core Production CSID".CreateOutStream(OutStream, TextEncoding::UTF8);
                 end;
             70512:
                 begin
-                    Clear("Simulation Production Secret");
-                    "Simulation Production Secret".CreateOutStream(OutStream, TextEncoding::UTF8);
+                    Clear("E-Invoice Simulation Production Secret");
+                    "E-Invoice Simulation Production Secret".CreateOutStream(OutStream, TextEncoding::UTF8);
                 end;
             70513:
                 begin
-                    Clear("Core Production Secret");
-                    "Core Production Secret".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Core Production Secret");
+                    "E-Invoice Core Production Secret".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
             70514:
                 begin
-                    Clear("Simulation Compliance CSID");
-                    "Simulation Compliance CSID".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Simulation Compliance CSID");
+                    "E-Invoice Simulation Compliance CSID".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
             70515:
                 begin
-                    Clear("Core Compliance CSID");
-                    "Core Compliance CSID".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Core Compliance CSID");
+                    "E-Invoice Core Compliance CSID".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
             70516:
                 begin
-                    Clear("Simulation Compliance Secret");
-                    "Simulation Compliance Secret".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Simulation Compliance Secret");
+                    "E-Invoice Simulation Compliance Secret".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
             70517:
                 begin
-                    Clear("Core Compliance Secret");
-                    "Core Compliance Secret".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Core Compliance Secret");
+                    "E-Invoice Core Compliance Secret".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
             70518:
                 begin
-                    Clear("Simulation Private Key");
-                    "Simulation Private Key".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Simulation Private Key");
+                    "E-Invoice Simulation Private Key".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
             70519:
                 begin
-                    Clear("Core Private Key");
-                    "Core Private Key".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Core Private Key");
+                    "E-Invoice Core Private Key".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
             70520:
                 begin
-                    Clear("Simulation Certificate");
-                    "Simulation Certificate".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Simulation Certificate");
+                    "E-Invoice Simulation Certificate".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
             70521:
                 begin
-                    Clear("Core Certificate");
-                    "Core Certificate".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+                    Clear("E-Invoice Core Certificate");
+                    "E-Invoice Core Certificate".CreateOutStream(OutStream, TEXTENCODING::UTF8);
                 end;
         end;
         OutStream.WriteText(NewBlobDescription);
@@ -227,75 +227,75 @@ table 70502 "E-Invoicing Zatca Setup"
         case FieldId of
             70510:
                 begin
-                    CalcFields(Rec."Simulation Production CSID");
-                    Rec."Simulation Production CSID".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName(Rec."Simulation Production CSID")));
+                    CalcFields(Rec."E-Invoice Simulation Production CSID");
+                    Rec."E-invoice Simulation Production CSID".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName(Rec."E-Invoice Simulation Production CSID")));
                 end;
             70511:
                 begin
-                    CalcFields("Core Production CSID");
-                    "Core Production CSID".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Core Production CSID");
+                    "E-Invoice Core Production CSID".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70512:
                 begin
-                    CalcFields("Simulation Production Secret");
-                    "Simulation Production Secret".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Simulation Production Secret");
+                    "E-Invoice Simulation Production Secret".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70513:
                 begin
-                    CalcFields("Core Production Secret");
-                    "Core Production Secret".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Core Production Secret");
+                    "E-Invoice Core Production Secret".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70514:
                 begin
-                    CalcFields("Simulation Compliance CSID");
-                    "Simulation Compliance CSID".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Simulation Compliance CSID");
+                    "E-Invoice Simulation Compliance CSID".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70515:
                 begin
-                    CalcFields("Core Compliance CSID");
-                    "Core Compliance CSID".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Core Compliance CSID");
+                    "E-Invoice Core Compliance CSID".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70516:
                 begin
-                    CalcFields("Simulation Compliance Secret");
-                    "Simulation Compliance Secret".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Simulation Compliance Secret");
+                    "E-Invoice Simulation Compliance Secret".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70517:
                 begin
-                    CalcFields("Core Compliance Secret");
-                    "Core Compliance Secret".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Core Compliance Secret");
+                    "E-Invoice Core Compliance Secret".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70518:
                 begin
-                    CalcFields("Simulation Private Key");
-                    "Simulation Private Key".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Simulation Private Key");
+                    "E-Invoice Simulation Private Key".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70519:
                 begin
-                    CalcFields("Core Private Key");
-                    "Core Private Key".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Core Private Key");
+                    "E-Invoice Core Private Key".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
             70520:
                 begin
-                    CalcFields("Simulation Certificate");
-                    "Simulation Certificate".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Simulation Certificate")));
+                    CalcFields("E-Invoice Simulation Certificate");
+                    "E-Invoice Simulation Certificate".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Simulation Certificate")));
                 end;
             70521:
                 begin
-                    CalcFields("Core Certificate");
-                    "Core Certificate".CreateInStream(InStream, TEXTENCODING::UTF8);
-                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("Core Certificate")));
+                    CalcFields("E-Invoice Core Certificate");
+                    "E-Invoice Core Certificate".CreateInStream(InStream, TEXTENCODING::UTF8);
+                    exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice Core Certificate")));
                 end;
         end;
 

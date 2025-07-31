@@ -4,79 +4,79 @@ pageextension 70501 "Customer DSSS" extends "Customer Card"
     {
         addafter("Address 2")
         {
-            field("Building No_DSSS"; rec."Building No_DSSS")
+            field("E-Invoice Building No"; rec."E-Invoice Building No")
             {
                 ApplicationArea = all;
                 ToolTip = 'Building';
 
             }
-            field(District_DSSS; rec.District_DSSS)
+            field("E-Invoice District"; rec."E-Invoice District")
             {
                 ApplicationArea = all;
                 ToolTip = 'District';
 
             }
-            field("Street Name_DSSS"; rec."Street Name_DSSS")
+            field("E-Invoice Street Name"; rec."E-Invoice Street Name")
             {
                 ApplicationArea = all;
                 ToolTip = 'Street Name';
 
             }
-            field("Additional No_DSSS"; rec."Additional No_DSSS")
+            field("E-Invoice Additional No"; rec."E-Invoice Additional No")
             {
                 ApplicationArea = all;
                 ToolTip = 'Additional No';
 
             }
-            field("Other Buyer ID_DSSS"; rec."Other Buyer ID_DSSS")
+            field("E-Invoice Other Buyer ID"; rec."E-Invoice Other Buyer ID")
             {
                 ApplicationArea = all;
                 ToolTip = 'Other Seller ID';
 
             }
-            field(Additional_Street_Name_DSSS; rec.Additional_Street_Name_DSSS)
+            field("E-Invoice Additional_Street_Name"; rec."E-Invoice Additional_Street_Name")
             {
                 ApplicationArea = all;
                 ToolTip = 'Additional_Street_Name';
 
             }
-            field(Plot_Identification_DSSS; rec.Plot_Identification_DSSS)
+            field("E-InvoicePlot_Identification"; rec."E-InvoicePlot_Identification")
             {
                 ApplicationArea = all;
                 ToolTip = 'Plot_Identification';
 
             }
-            field(Customer_ID_DSSS; rec.Customer_ID_DSSS)
+            field("E-Invoice Customer_ID"; rec."E-Invoice Customer_ID")
             {
                 ApplicationArea = all;
                 ToolTip = 'Company_ID';
 
             }
-            field(Registration_Name_DSSS; rec.Registration_Name_DSSS)
+            field("E-Invoice Registration_Name"; rec."E-Invoice Registration_Name")
             {
                 ApplicationArea = all;
                 ToolTip = 'Registration_Name';
 
             }
-            field("City_Subdivision_Name_DSSS"; rec."City_Subdivision_Name_DSSS")
+            field("E-Invoice City_Subdivision_Name"; rec."E-Invoice City_Subdivision_Name")
             {
                 ApplicationArea = all;
                 ToolTip = 'City_Subdivision_Name';
 
 
             }
-            field(NeighbourHood_DSSS; rec.NeighbourHood_DSSS)
+            field("E-Invoice NeighbourHood"; rec."E-Invoice NeighbourHood")
             {
                 ApplicationArea = All;
                 ToolTip = 'NeighbourHood';
 
             }
-            field("Scheme_ID_DSSS"; rec."Scheme_ID_DSSS")
+            field("E-Invoice Scheme_ID"; rec."E-Invoice Scheme_ID")
             {
                 ApplicationArea = all;
                 ToolTip = 'Scheme_ID';
             }
-            field("Company Type_DSSS"; rec."Company Type_DSSS")
+            field("E-Invoice Company Type"; rec."E-Invoice Company Type")
             {
                 ApplicationArea = All;
                 ToolTip = 'Company Type';
@@ -86,82 +86,82 @@ pageextension 70501 "Customer DSSS" extends "Customer Card"
         }
         addafter(General)
         {
-            group("Arabic Information_DSSS")
+            group("E-Invoice Arabic Information")
             {
                 Caption = 'Arabic Information';
-                field("Arabic Name_DSSS"; rec."Arabic Name_DSSS")
+                field("E-Invoice Arabic Name"; rec."E-Invoice Arabic Name")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic Information';
 
                 }
-                field("Arabic Street Name_DSSS"; rec."Arabic Street Name_DSSS")
+                field("E-Invoice Arabic Street Name"; rec."E-Invoice Arabic Street Name")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic Street Name';
 
                 }
-                field("Add. Street_Name_Arabic_DSSS"; Rec."Add. Street_Name_Arabic_DSSS")
+                field("E-Invoice Add. Street_Name_Arabic"; Rec."E-Invoice Add. Street_Name_Arabic")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Add. Street_Name_Arabic';
 
                 }
-                field("Arabic Building No_DSSS"; rec."Arabic Building No_DSSS")
+                field("E-Invoice Arabic Building No"; rec."E-Invoice Arabic Building No")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic Building No';
 
                 }
-                field("Arabic City_DSSS"; rec."Arabic City_DSSS")
+                field("E-Invoice Arabic City"; rec."E-Invoice Arabic City")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic City';
 
                 }
-                field("Arabic District_DSSS"; rec."Arabic District_DSSS")
+                field("E-Invoice Arabic District"; rec."E-Invoice Arabic District")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic District';
 
                 }
-                field("Arabic Country_DSSS"; rec."Arabic Country_DSSS")
+                field("E-Invoice Arabic Country"; rec."E-Invoice Arabic Country")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic Country';
 
                 }
-                field("Arabic PostalCode_DSSS"; rec."Arabic PostalCode_DSSS")
+                field("E-Invoice Arabic PostalCode"; rec."E-Invoice Arabic PostalCode")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic PostalCode';
 
                 }
-                field("Arabic Additional No_DSSS"; rec."Arabic Additional No_DSSS")
+                field("E-Invoice Arabic Additional No"; rec."E-Invoice Arabic Additional No")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic Additional No';
 
                 }
-                field("Arabic VAT No_DSSS"; rec."Arabic VAT No_DSSS")
+                field("E-Invoice Arabic VAT No"; rec."E-Invoice Arabic VAT No")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic VAT No';
 
                 }
-                field("Arabic Other Buyer ID_DSSS"; rec."Arabic Other Buyer ID_DSSS")
+                field("E-Invoice Arabic Other Buyer ID"; rec."E-Invoice Arabic Other Buyer ID")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic Other Seller ID';
 
                 }
-                field("Arabic NeighbourHood_DSSS"; rec."Arabic NeighbourHood_DSSS")
+                field("E-Invoice Arabic NeighbourHood"; rec."E-Invoice Arabic NeighbourHood")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic NeighbourHood';
 
                 }
-                field("Arabic Plot_Iden_DSSS"; rec."Arabic Plot_Iden_DSSS")
+                field("E-Invoice Arabic Plot_Iden"; rec."E-Invoice Arabic Plot_Iden")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic Plot_Iden';

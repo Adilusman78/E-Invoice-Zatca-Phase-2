@@ -22,11 +22,11 @@ report 70500 "Arabic Invoice DSSS"
             {
 
             }
-            column(Cust_CompanyType; Customer."Company Type_DSSS")
+            column(Cust_CompanyType; Customer."E-Invoice Company Type")
             {
 
             }
-            column(Cust_Arabic_Country; Customer."Arabic Country_DSSS")
+            column(Cust_Arabic_Country; Customer."E-Invoice Arabic Country")
             {
 
             }
@@ -34,40 +34,40 @@ report 70500 "Arabic Invoice DSSS"
             {
 
             }
-            column(Cust_Arabic_PostCode; Customer."Arabic PostalCode_DSSS")
+            column(Cust_Arabic_PostCode; Customer."E-Invoice Arabic PostalCode")
             {
 
             }
-            column(Cust_Arabic_AdditionalNo; Customer."Arabic Additional No_DSSS")
+            column(Cust_Arabic_AdditionalNo; Customer."E-Invoice Arabic Additional No")
             {
 
             }
-            column(Cust_Arabic_VAT; Customer."Arabic VAT No_DSSS")
+            column(Cust_Arabic_VAT; Customer."E-Invoice Arabic VAT No")
             {
 
             }
-            column(Cust_Arabic_OBuyerID; Customer."Arabic Other Buyer ID_DSSS")
+            column(Cust_Arabic_OBuyerID; Customer."E-Invoice Arabic Other Buyer ID")
             {
 
             }
-            column(Company_ArabicCountry; CompanyInformation."Arabic Country_DSSS")
+            column(Company_ArabicCountry; CompanyInformation."E-Invoice Arabic Country")
             {
 
             }
-            column(Company_Arabic_PostCode; CompanyInformation."Arabic PostalCode_DSSS")
+            column(Company_Arabic_PostCode; CompanyInformation."E-Invoice Arabic PostalCode")
             {
 
             }
-            column(Company_ArabicAdditionalNo; CompanyInformation."Arabic Additional No_DSSS")
+            column(Company_ArabicAdditionalNo; CompanyInformation."E-Invoice Arabic Additional No")
             {
 
             }
-            column(Company_ArabicVAtNo; CompanyInformation."Arabic VAT No_DSSS")
+            column(Company_ArabicVAtNo; CompanyInformation."E-Invoice Arabic VAT No")
             {
 
             }
             column(Company_Arabic_OtherSeller;
-            CompanyInformation."Arabic Other Seller ID_DSSS")
+            CompanyInformation."E-Invoice Arabic Other Seller ID")
             {
 
             }
@@ -111,7 +111,7 @@ report 70500 "Arabic Invoice DSSS"
             {
 
             }
-            column("Area_ArabicDesc"; AreaDesc."Arabic Text DSSS")
+            column("Area_ArabicDesc"; AreaDesc."E-Invoice Arabic Text")
             {
 
             }
@@ -147,15 +147,15 @@ report 70500 "Arabic Invoice DSSS"
 
             }
 
-            column(Cust_District; Customer.District_DSSS)
+            column(Cust_District; Customer."E-Invoice District")
             {
 
             }
-            column(Cust_StreetName; Customer."Street Name_DSSS")
+            column(Cust_StreetName; Customer."E-Invoice Street Name")
             {
 
             }
-            column(Cust_BuildinNo; Customer."Building No_DSSS")
+            column(Cust_BuildinNo; Customer."E-Invoice Building No")
             {
 
             }
@@ -213,31 +213,31 @@ report 70500 "Arabic Invoice DSSS"
             {
 
             }
-            column(CustArabic_Street; Customer."Arabic Street Name_DSSS")
+            column(CustArabic_Street; Customer."E-Invoice Arabic Street Name")
             {
 
             }
-            column(CustArabic_Name; Customer."Arabic Name_DSSS")
+            column(CustArabic_Name; Customer."E-Invoice Arabic Name")
             {
 
             }
-            column(CustArabic_Dist; Customer."Arabic District_DSSS")
+            column(CustArabic_Dist; Customer."E-Invoice Arabic District")
             {
 
             }
-            column(CustArabic_City; Customer."Arabic City_DSSS")
+            column(CustArabic_City; Customer."E-Invoice Arabic City")
             {
 
             }
-            column(CustArabic_Building; Customer."Arabic Building No_DSSS")
+            column(CustArabic_Building; Customer."E-Invoice Arabic Building No")
             {
 
             }
-            column(Cust_AdditionalNo; Customer."Additional No_DSSS")
+            column(Cust_AdditionalNo; Customer."E-Invoice Additional No")
             {
 
             }
-            column(Cust_OtherBuyer; Customer."Other Buyer ID_DSSS")
+            column(Cust_OtherBuyer; Customer."E-Invoice Other Buyer ID")
             {
 
             }
@@ -258,15 +258,15 @@ report 70500 "Arabic Invoice DSSS"
             {
 
             }
-            column(CompanyBuilding; CompanyInformation."Building No_DSSS")
+            column(CompanyBuilding; CompanyInformation."E-Invoice Building No")
             {
 
             }
-            column(CompanyStreet; CompanyInformation."Street Name_DSSS")
+            column(CompanyStreet; CompanyInformation."E-Invoice Street Name")
             {
 
             }
-            column(CompanyDistrict; CompanyInformation.District_DSSS)
+            column(CompanyDistrict; CompanyInformation."E-Invoice District")
             {
 
             }
@@ -290,32 +290,32 @@ report 70500 "Arabic Invoice DSSS"
             {
 
             }
-            column(CompanyArabic_Building; CompanyInformation."Arabic Building No_DSSS")
+            column(CompanyArabic_Building; CompanyInformation."E-Invoice Arabic Building No")
             {
 
             }
-            column(CompanyArabic_City; CompanyInformation."Arabic City_DSSS")
+            column(CompanyArabic_City; CompanyInformation."E-Invoice Arabic City")
             {
 
             }
-            column(CompanyArabic_Dist; CompanyInformation."Arabic District_DSSS")
+            column(CompanyArabic_Dist; CompanyInformation."E-Invoice Arabic District")
             {
 
             }
-            column(CompanyArabic_Name; CompanyInformation."Arabic Name_DSSS")
+            column(CompanyArabic_Name; CompanyInformation."E-Invoice Arabic Name")
             {
 
             }
-            column(CompanyArabic_Street; CompanyInformation."Arabic Street Name_DSSS")
+            column(CompanyArabic_Street; CompanyInformation."E-Invoice Arabic Street Name")
             {
 
             }
-            column(CompanyAdditionalNo; CompanyInformation."Additional No_DSSS")
+            column(CompanyAdditionalNo; CompanyInformation."E-Invoice Additional No")
             {
 
 
             }
-            column(CompanyOtherSellerID; CompanyInformation."Other Seller ID_DSSS")
+            column(CompanyOtherSellerID; CompanyInformation."E-Invoice Other Seller ID")
             {
 
             }
@@ -343,7 +343,7 @@ report 70500 "Arabic Invoice DSSS"
                 {
 
                 }
-                column(Arabic_Desc; item_lRec."Arabic Description DSSS")
+                column(Arabic_Desc; item_lRec."E-Invoice Arabic Description")
                 {
 
                 }
@@ -403,7 +403,7 @@ report 70500 "Arabic Invoice DSSS"
                         txtCRLF := 'xx';
                         txtCRLF[1] := 13;
                         txtCRLF[2] := 10;
-                        itemDesc := "Sales Invoice Line".Description + txtCRLF + item_lRec."Arabic Description DSSS";
+                        itemDesc := "Sales Invoice Line".Description + txtCRLF + item_lRec."E-Invoice Arabic Description";
                     end
                     else
                         itemDesc := "Sales Invoice Line".Description;
@@ -477,7 +477,7 @@ report 70500 "Arabic Invoice DSSS"
 
                 Customer.Reset();
                 if Customer.Get("Sell-to Customer No.") then;
-                if Customer."Company Type_DSSS" = Customer."Company Type_DSSS"::Individual then
+                if Customer."E-Invoice Company Type" = Customer."E-Invoice Company Type"::Individual then
                     DesignQRCode(SalesInvoicHeader);
 
                 if CompanyInformation.Get() then
@@ -513,7 +513,7 @@ report 70500 "Arabic Invoice DSSS"
                 TotalAmountInWordsENG := InsStr(TotalAmountInWordsENG, ' RIYAL', StrPos(TotalAmountInWordsENG, ' AND')); //Mesam 24.2.2020 Changed from US Dollars to Dollars with Jaydeep.
                 if (StrPos(TotalAmountInWordsENG, '/')) <> 0 then //Mesam 24.2.2020 if you found / make the code work as originally written.
                     Evaluate(DecimalNumberENG, DelChr(CopyStr(TotalAmountInWordsENG, StrPos(TotalAmountInWordsENG, ' AND'), (StrPos(TotalAmountInWordsENG, '/') - StrPos(TotalAmountInWordsENG, ' AND'))), '=', ' AND '));
-              //  CheckReportENG.FormatNoText(NumberInTextENG, DecimalNumberENG, '');
+                //  CheckReportENG.FormatNoText(NumberInTextENG, DecimalNumberENG, '');
                 if (StrPos(TotalAmountInWordsENG, ' HALALA')) <> 0 then begin
                     TotalAmountInWordsENG := DelStr(TotalAmountInWordsENG, (StrPos(TotalAmountInWordsENG, ' AND') + 5), (StrPos(TotalAmountInWordsENG, ' HALALA') - (StrPos(TotalAmountInWordsENG, ' AND') + 5)));
                     TotalAmountInWordsENG := InsStr(TotalAmountInWordsENG, CopyStr(NumberInTextENG[1], 6, (StrPos(NumberInTextENG[1], ' AND') - 6)), StrPos(TotalAmountInWordsENG, ' HALALA'));
@@ -694,7 +694,7 @@ report 70500 "Arabic Invoice DSSS"
         // VATAmt2 := Format(VATInput, 0, 2);
         barcodeProvider := enum::"Barcode Font Provider 2D"::IDAutomation2D;
         BarcodeSym := Enum::"Barcode Symbology 2D"::"QR-Code";
-        BarcodeStr := barcodeProvider.EncodeFont(_SalesInvoiceHeader."ZATCA QR Code", BarcodeSym);
+        BarcodeStr := barcodeProvider.EncodeFont(_SalesInvoiceHeader."E-Invoice ZATCA QR Code", BarcodeSym);
     end;
 
     procedure DecToBinUTF8(DecVal: Decimal) BinVal: Text

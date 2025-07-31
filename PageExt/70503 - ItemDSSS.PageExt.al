@@ -4,7 +4,7 @@ pageextension 70503 "ItemDSSS" extends "Item Card"
     {
         addafter(Description)
         {
-            field("Arabic Description DSSS"; rec."Arabic Description DSSS")
+            field("E-Invoice Arabic Description"; rec."E-Invoice Arabic Description")
             {
                 ApplicationArea = All;
                 ToolTip = 'Arabic Description';

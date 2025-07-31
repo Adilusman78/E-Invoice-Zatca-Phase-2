@@ -4,7 +4,7 @@ pageextension 70504 AreaDSSS extends Areas
     {
         addafter(Text)
         {
-            field("Arabic Text DSSS"; rec."Arabic Text DSSS")
+            field("E-Invoice Arabic Text"; rec."E-Invoice Arabic Text")
             {
                 ApplicationArea = All;
                 ToolTip = 'Arabic Text';

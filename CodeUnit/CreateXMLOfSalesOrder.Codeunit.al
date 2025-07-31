@@ -12,11 +12,11 @@ codeunit 70503 CreateXMLOfSalesOrder
     begin
         SalesHeader.CalcFields("E-Invoice ZATCA Response");
         if comapnyinfo_lRec.Get() then
-            if comapnyinfo_lRec."Zatca Function_DSSS" = true then begin
+            if comapnyinfo_lRec."E-Invoice Zatca Function" = true then begin
                 if SalesHeader."E-Invoice Clearance Status" <> 'CLEARED' then
                     Error('Please Submit Document to Zatca');
             end;
-        SalesInvHeader."ZATCA Invoice Response_DSSS" := SalesHeader."E-Invoice ZATCA Response";
+        SalesInvHeader."E-Invoice ZATCA Invoice Response" := SalesHeader."E-Invoice ZATCA Response";
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforeSalesCrMemoLineInsert', '', true, true)]
@@ -27,11 +27,11 @@ codeunit 70503 CreateXMLOfSalesOrder
     begin
         SalesHeader.CalcFields("E-Invoice ZATCA Response");
         if comapnyinfo_lRec.Get() then
-            if comapnyinfo_lRec."Zatca Function_DSSS" = true then begin
+            if comapnyinfo_lRec."E-Invoice Zatca Function" = true then begin
                 if SalesHeader."E-Invoice Clearance Status" <> 'CLEARED' then
                     Error('Please Submit Document to Zatca');
             end;
-        SalesCrMemoHeader."ZATCA Invoice Response_DSSS" := SalesHeader."E-Invoice ZATCA Response";
+        SalesCrMemoHeader."E-Invoice ZATCA Invoice Response" := SalesHeader."E-Invoice ZATCA Response";
         SalesCrMemoHeader.Modify();
     end;
 
@@ -50,11 +50,11 @@ codeunit 70503 CreateXMLOfSalesOrder
     procedure GetInvoiceHash(): Text
     begin
         if CompanyInfo.get() then;
-        if CompanyInfo."Invoice Hash_DSSS" = '' then begin
+        if CompanyInfo."E-Invoice Invoice Hash" = '' then begin
             PiHContant := 'NWZlY2ViNjZmZmM4NmYzOGQ5NTI3ODZjNmQ2OTZjNzljMmRiYzIzOWRkNGU5MWI0NjcyOWQ3M2EyN2ZiNTdlOQ==';
             exit(PiHContant);
         end else begin
-            PiHContant := CompanyInfo."Invoice Hash_DSSS";
+            PiHContant := CompanyInfo."E-Invoice Invoice Hash";
             exit(PiHContant);
         end;
 
@@ -330,7 +330,7 @@ codeunit 70503 CreateXMLOfSalesOrder
         cacPartyIdentification := XmlElement.Create('PartyIdentification', '*-123#').AsXmlNode();
         cacPartyIdentification.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cac', '*-123#'));
 
-        cbcID5 := XmlElement.Create('ID', '*-123#', Format(CompanyInfo.Scheme_ID_DSSS)).AsXmlNode();
+        cbcID5 := XmlElement.Create('ID', '*-123#', Format(CompanyInfo."E-Invoice Scheme_ID")).AsXmlNode();
         cbcID5.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
         cbcID5.AsXmlElement().Add(XmlAttribute.Create('schemeID', 'CRN'));
 
@@ -338,16 +338,16 @@ codeunit 70503 CreateXMLOfSalesOrder
         cacPostalAddress := XmlElement.Create('PostalAddress', '*-123#').AsXmlNode();
         cacPostalAddress.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cac', '*-123#'));
 
-        cbcStreetName := XmlElement.Create('StreetName', '*-123#', Format(CompanyInfo."Street Name_DSSS")).AsXmlNode();
+        cbcStreetName := XmlElement.Create('StreetName', '*-123#', Format(CompanyInfo."E-Invoice Street Name")).AsXmlNode();
         cbcStreetName.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
-        cbcBuildingNumber := XmlElement.Create('BuildingNumber', '*-123#', Format(CompanyInfo."Building No_DSSS")).AsXmlNode();
+        cbcBuildingNumber := XmlElement.Create('BuildingNumber', '*-123#', Format(CompanyInfo."E-Invoice Building No")).AsXmlNode();
         cbcBuildingNumber.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
-        cbcPlotIdentification := XmlElement.Create('PlotIdentification', '*-123#', Format(CompanyInfo.Plot_Identification_DSSS)).AsXmlNode();
+        cbcPlotIdentification := XmlElement.Create('PlotIdentification', '*-123#', Format(CompanyInfo."E-Invoice Plot_Identification")).AsXmlNode();
         cbcPlotIdentification.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
-        cbcCitySubdivisionName := XmlElement.Create('CitySubdivisionName', '*-123#', Format(CompanyInfo."City_Subdivision_Name_DSSS")).AsXmlNode();
+        cbcCitySubdivisionName := XmlElement.Create('CitySubdivisionName', '*-123#', Format(CompanyInfo."E-Invoice City_Subdivision_Name")).AsXmlNode();
         cbcCitySubdivisionName.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
         cbcCityName := XmlElement.Create('CityName', '*-123#', Format(CompanyInfo.City)).AsXmlNode();
@@ -366,7 +366,7 @@ codeunit 70503 CreateXMLOfSalesOrder
         cacPartyTaxScheme.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cac', '*-123#'));
 
 
-        cbcCompanyID := XmlElement.Create('CompanyID', '*-123#', Format(CompanyInfo.Scheme_ID_DSSS)).AsXmlNode(); // need to confirm mapping
+        cbcCompanyID := XmlElement.Create('CompanyID', '*-123#', Format(CompanyInfo."E-Invoice Scheme_ID")).AsXmlNode(); // need to confirm mapping
         cbcCompanyID.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
         cacTaxScheme := XmlElement.Create('TaxScheme', '*-123#').AsXmlNode();
@@ -378,7 +378,7 @@ codeunit 70503 CreateXMLOfSalesOrder
         cacPartyLegalEntity := XmlElement.Create('PartyLegalEntity', '*-123#').AsXmlNode();
         cacPartyLegalEntity.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cac', '*-123#'));
 
-        cbcRegistrationName := XmlElement.Create('RegistrationName', '*-123#', Format(CompanyInfo.Registration_Name_DSSS)).AsXmlNode();
+        cbcRegistrationName := XmlElement.Create('RegistrationName', '*-123#', Format(CompanyInfo."E-Invoice Registration_Name")).AsXmlNode();
         cbcRegistrationName.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
         cacAccountingCustomerParty := XmlElement.Create('AccountingCustomerParty', '*-123#').AsXmlNode();
@@ -391,7 +391,7 @@ codeunit 70503 CreateXMLOfSalesOrder
         cacPartyIdentification1.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cac', '*-123#'));
 
 
-        cbcID7 := XmlElement.Create('ID', '*-123#', Format(Customer_Rec."Scheme_ID_DSSS")).AsXmlNode();
+        cbcID7 := XmlElement.Create('ID', '*-123#', Format(Customer_Rec."E-Invoice Scheme_ID")).AsXmlNode();
         cbcID7.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
         cbcID7.AsXmlElement().Add(XmlAttribute.Create('schemeID', 'NAT'));
 
@@ -401,16 +401,16 @@ codeunit 70503 CreateXMLOfSalesOrder
 
 
 
-        cbcStreetName1 := XmlElement.Create('StreetName', '*-123#', Format(Customer_Rec."Street Name_DSSS")).AsXmlNode();
+        cbcStreetName1 := XmlElement.Create('StreetName', '*-123#', Format(Customer_Rec."E-Invoice Street Name")).AsXmlNode();
         cbcStreetName1.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
-        cbcBuildingNumber1 := XmlElement.Create('BuildingNumber', '*-123#', Format(Customer_Rec."Building No_DSSS")).AsXmlNode();
+        cbcBuildingNumber1 := XmlElement.Create('BuildingNumber', '*-123#', Format(Customer_Rec."E-Invoice Building No")).AsXmlNode();
         cbcBuildingNumber1.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
-        cbcPlotIdentification1 := XmlElement.Create('PlotIdentification', '*-123#', Format(Customer_Rec.Plot_Identification_DSSS)).AsXmlNode();
+        cbcPlotIdentification1 := XmlElement.Create('PlotIdentification', '*-123#', Format(Customer_Rec."E-InvoicePlot_Identification")).AsXmlNode();
         cbcPlotIdentification1.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
-        cbcCitySubdivisionName1 := XmlElement.Create('CitySubdivisionName', '*-123#', Format(Customer_Rec."City_Subdivision_Name_DSSS")).AsXmlNode();
+        cbcCitySubdivisionName1 := XmlElement.Create('CitySubdivisionName', '*-123#', Format(Customer_Rec."E-Invoice City_Subdivision_Name")).AsXmlNode();
         cbcCitySubdivisionName1.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
         cbcCityName1 := XmlElement.Create('CityName', '*-123#', Format(Customer_Rec.City)).AsXmlNode();
@@ -437,7 +437,7 @@ codeunit 70503 CreateXMLOfSalesOrder
         cacPartyLegalEntity1 := XmlElement.Create('PartyLegalEntity', '*-123#').AsXmlNode();
         cacPartyLegalEntity1.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cac', '*-123#'));
 
-        cbcRegistrationName1 := XmlElement.Create('RegistrationName', '*-123#', Format(CompanyInfo.Registration_Name_DSSS)).AsXmlNode();
+        cbcRegistrationName1 := XmlElement.Create('RegistrationName', '*-123#', Format(CompanyInfo."E-Invoice Registration_Name")).AsXmlNode();
         cbcRegistrationName1.AsXmlElement().Add(XmlAttribute.CreateNamespaceDeclaration('cbc', '*-123#'));
 
         // 
@@ -973,8 +973,8 @@ codeunit 70503 CreateXMLOfSalesOrder
         //@@HA
         tbl_ZatcaSetup.Reset();
         if tbl_ZatcaSetup.FindFirst() then begin
-            Authorization := StorageServiceAuthorization.CreateSharedKey(tbl_ZatcaSetup."Storage Account Access Key");//?? need to under stand with mateen
-            ABSBlobClient.Initialize(LowerCase(tbl_ZatcaSetup."Storage Account Name"), LowerCase(tbl_ZatcaSetup."Contaier Name"), Authorization);
+            Authorization := StorageServiceAuthorization.CreateSharedKey(tbl_ZatcaSetup."E-Invoice Storage Account Access Key");//?? need to under stand with mateen
+            ABSBlobClient.Initialize(LowerCase(tbl_ZatcaSetup."E-Invoice Storage Account Name"), LowerCase(tbl_ZatcaSetup."E-Invoice Contaier Name"), Authorization);
 
             Filename := 'Invoice.xml';
             ABSBlobClient.PutBlobBlockBlobStream(Filename, FileStream);
@@ -1005,7 +1005,7 @@ codeunit 70503 CreateXMLOfSalesOrder
         if tbl_ZatcaSetup.FindFirst() then begin
 
         end;
-        url := tbl_ZatcaSetup."HTTP Triger func. URL"; //new url DSSS //http triger function we will use defult function key
+        url := tbl_ZatcaSetup."E-Invoice HTTP Triger func. URL"; //new url DSSS //http triger function we will use defult function key
         if Envinfo_lRec.IsProduction() = true then
             PayloadTxt := CreateLinesPayloadCore(tbl_ZatcaSetup, SalesHeader)    //Core means Production
         else
@@ -1049,11 +1049,11 @@ codeunit 70503 CreateXMLOfSalesOrder
         _SystemID := _SystemID.Replace('{', '');
         _SystemID := _SystemID.Replace('}', '');
         JsonObjectLines.Add('UUID', Format(SalesHeader.SystemId).TrimStart('{').TrimEnd('}'));
-        JsonObjectLines.Add('zatcaAPIUrl', tbl_ZatcaSetup."ZATCA-Env. Simulation");
-        JsonObjectLines.Add('pCSID', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("Simulation Production CSID")));
-        JsonObjectLines.Add('pSecret', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("Simulation Production Secret")));
-        JsonObjectLines.Add('certificateContent', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("Simulation Certificate")));
-        JsonObjectLines.Add('privateKey', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("Simulation Private Key")));
+        JsonObjectLines.Add('zatcaAPIUrl', tbl_ZatcaSetup."E-Invoice ZATCA-Env. Simulation");
+        JsonObjectLines.Add('pCSID', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("E-Invoice Simulation Production CSID")));
+        JsonObjectLines.Add('pSecret', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("E-Invoice Simulation Production Secret")));
+        JsonObjectLines.Add('certificateContent', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("E-Invoice Simulation Certificate")));
+        JsonObjectLines.Add('privateKey', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("E-Invoice Simulation Private Key")));
         JsonObjectLines.Add('pihContent', GetInvoiceHash());
         JsonObjectLines.WriteTo(JsonObjectLinesLoad);
         LinesPyload := JsonObjectLinesLoad;
@@ -1073,11 +1073,11 @@ codeunit 70503 CreateXMLOfSalesOrder
         Clear(JsonObjectLinesLoad);
         JsonObjectLines.Add('fileName', Format('Invoice.xml'));
         JsonObjectLines.Add('UUID', Format(SalesHeader.SystemId).TrimStart('{').TrimEnd('}'));
-        JsonObjectLines.Add('zatcaAPIUrl', tbl_ZatcaSetup."ZATCA-Env. Production");
-        JsonObjectLines.Add('pCSID', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("Core Production CSID")));
-        JsonObjectLines.Add('pSecret', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("Core Production Secret")));
-        JsonObjectLines.Add('certificateContent', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("Core Certificate")));
-        JsonObjectLines.Add('privateKey', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("Core Private Key")));
+        JsonObjectLines.Add('zatcaAPIUrl', tbl_ZatcaSetup."E-Invoice ZATCA-Env. Production");
+        JsonObjectLines.Add('pCSID', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("E-Invoice Core Production CSID")));
+        JsonObjectLines.Add('pSecret', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("E-Invoice Core Production Secret")));
+        JsonObjectLines.Add('certificateContent', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("E-Invoice Core Certificate")));
+        JsonObjectLines.Add('privateKey', tbl_ZatcaSetup.GetCoreCertificateDescription1(tbl_ZatcaSetup.FieldNo("E-Invoice Core Private Key")));
         JsonObjectLines.Add('pihContent', GetInvoiceHash());
         JsonObjectLines.WriteTo(JsonObjectLinesLoad);
         exit(LinesPyload)
@@ -1174,7 +1174,7 @@ codeunit 70503 CreateXMLOfSalesOrder
             AssumedPositionOfExtractedData := PositionOFHardCodeString + LengthOFHardcode + 2;
             LengthOFExtractedDataShouldBe := (LengthOFString - AssumedPositionOfExtractedData) - 1;
             ExtractedData := CopyStr(ResponseTxt, AssumedPositionOfExtractedData, LengthOFExtractedDataShouldBe);
-            Companyinfo_lRec."Invoice Hash_DSSS" := ExtractedData;
+            Companyinfo_lRec."E-Invoice Invoice Hash" := ExtractedData;
             Companyinfo_lRec.Modify();
         end;
         SalesHeader.Modify();

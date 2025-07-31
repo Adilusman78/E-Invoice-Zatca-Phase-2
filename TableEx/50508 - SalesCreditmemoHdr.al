@@ -2,30 +2,30 @@ tableextension 70505 "Posted Sale Credit Memo_DSSS" extends "Sales Cr.Memo Heade
 {
     fields
     {
-        field(50500; "Cleared By ZATCA_DSSS"; Boolean)
+        field(50500; "E-Invoice Cleared By ZATCA"; Boolean)
         {
             Caption = 'Cleared By ZATCA';
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(50501; "ZATCA Clearance Status_DSSS"; Text[35])
+        field(50501; "E-Invoice ZATCA Clearance Status"; Text[35])
         {
             Caption = 'ZATCA Clearance Status';
             DataClassification = CustomerContent;
             Editable = false;
         }
 
-        field(50502; "ZATCA Invoice Response_DSSS"; Blob)
+        field(50502; "E-Invoice ZATCA Invoice Response"; Blob)
         {
             //Caption = 'ZATCA Invoice Response';
             DataClassification = CustomerContent;
         }
-        field(50503; "Pih Hash_DSSS"; Text[250])
+        field(50503; "E-Invoice Pih Hash"; Text[250])
         {
             Caption = 'Pih Hash';
             DataClassification = ToBeClassified;
         }
-        field(50504; "ZATCA QR Code"; Text[2024])
+        field(50504; "E-Invoice ZATCA QR Code"; Text[2024])
         {
             Editable = false;
             DataClassification = ToBeClassified;
@@ -45,8 +45,8 @@ tableextension 70505 "Posted Sale Credit Memo_DSSS" extends "Sales Cr.Memo Heade
     var
         OutStream: OutStream;
     begin
-        Clear(Rec."ZATCA Invoice Response_DSSS");
-        Rec."ZATCA Invoice Response_DSSS".CreateOutStream(OutStream, TEXTENCODING::UTF8);
+        Clear(Rec."E-Invoice ZATCA Invoice Response");
+        Rec."E-Invoice ZATCA Invoice Response".CreateOutStream(OutStream, TEXTENCODING::UTF8);
         OutStream.WriteText(NewWorkDescription);
         Rec.Modify();
     end;
@@ -56,9 +56,9 @@ tableextension 70505 "Posted Sale Credit Memo_DSSS" extends "Sales Cr.Memo Heade
         TypeHelper: Codeunit "Type Helper";
         InStream: InStream;
     begin
-        CalcFields(Rec."ZATCA Invoice Response_DSSS");
-        Rec."ZATCA Invoice Response_DSSS".CreateInStream(InStream, TEXTENCODING::UTF8);
-        exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("ZATCA Invoice Response_DSSS")));
+        CalcFields(Rec."E-Invoice ZATCA Invoice Response");
+        Rec."E-Invoice ZATCA Invoice Response".CreateInStream(InStream, TEXTENCODING::UTF8);
+        exit(TypeHelper.TryReadAsTextWithSepAndFieldErrMsg(InStream, TypeHelper.LFSeparator(), FieldName("E-Invoice ZATCA Invoice Response")));
     end;
 
     var

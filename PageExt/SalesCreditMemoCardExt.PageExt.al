@@ -149,7 +149,7 @@ pageextension 70508 SalesCreditMemoCardExt extends "Sales Credit Memo"
     begin
         ZATCAResponseTxt := Rec.GetZATCADescription();
         if Companyinfo_gRec.Get() then
-            if Companyinfo_gRec."Zatca Function_DSSS" = true then begin
+            if Companyinfo_gRec."E-Invoice Zatca Function" = true then begin
                 Zatcavisibility := true;
             end
             else
@@ -161,7 +161,7 @@ pageextension 70508 SalesCreditMemoCardExt extends "Sales Credit Memo"
         myInt: Integer;
     begin
         if Companyinfo_gRec.Get() then
-            if Companyinfo_gRec."Zatca Function_DSSS" = true then begin
+            if Companyinfo_gRec."E-Invoice Zatca Function" = true then begin
                 Zatcavisibility := true;
             end
             else

@@ -5,14 +5,14 @@ pageextension 70502 "PstSalesInv" extends "Posted Sales Invoice"
     {
         addafter("Work Description")
         {
-            field("Cleared By ZATCA_DSSS"; Rec."Cleared By ZATCA_DSSS")
+            field("Cleared By ZATCA_DSSS"; Rec."E-Invoice Cleared By ZATCA")
             {
                 ApplicationArea = All;
                 Editable = false;
                 // Visible=false;
                 //Visible = Zatcavisibility;
             }
-            field("ZATCA Clearance Status_DSSS"; Rec."ZATCA Clearance Status_DSSS")
+            field("ZATCA Clearance Status_DSSS"; Rec."E-Invoice ZATCA Clearance Status")
             {
                 ApplicationArea = All;
                 Editable = false;
@@ -20,7 +20,7 @@ pageextension 70502 "PstSalesInv" extends "Posted Sales Invoice"
                 //Visible = Zatcavisibility;
 
             }
-            field("Pih Hash_DSSS"; Rec."Pih Hash_DSSS")
+            field("Pih Hash_DSSS"; Rec."E-Invoice Pih Hash")
             {
                 ApplicationArea = all;
                 Editable = false;
@@ -35,7 +35,7 @@ pageextension 70502 "PstSalesInv" extends "Posted Sales Invoice"
                 //Visible = Zatcavisibility;
 
             }
-            field("ZATCA QR Code"; Rec."ZATCA QR Code")
+            field("ZATCA QR Code"; Rec."E-Invoice ZATCA QR Code")
             {
                 ApplicationArea = All;
             }

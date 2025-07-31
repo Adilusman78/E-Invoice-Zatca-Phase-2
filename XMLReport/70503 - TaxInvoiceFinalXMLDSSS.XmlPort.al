@@ -122,7 +122,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                                     {
 
                                         XmlName = 'xmlns:Ds';
-                                       //NamespacePrefix = 'ds';
+                                        //NamespacePrefix = 'ds';
                                         trigger OnBeforePassVariable()
                                         begin
                                             dss := 'http://www.w3.org/2000/09/xmldsig#';
@@ -808,7 +808,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             trigger OnBeforePassVariable()
                             var
                             begin
-                                cbcID := CompanyInformation."Scheme_ID_DSSS";
+                                cbcID := CompanyInformation."E-Invoice Scheme_ID";
                             end;
                         }
                     }
@@ -822,7 +822,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             //
                             begin
-                                StreetName := CompanyInformation."Street Name_DSSS";
+                                StreetName := CompanyInformation."E-Invoice Street Name";
                             end;
                         }
                         textelement(AdditionalStreetName)
@@ -832,7 +832,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             // 
                             begin
-                                AdditionalStreetName := CompanyInformation.Additional_Street_Name_DSSS;
+                                AdditionalStreetName := CompanyInformation."E-Invoice Additional_Street_Name";
                             end;
 
                         }
@@ -843,7 +843,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             // 
                             begin
-                                BuildingNumber := CompanyInformation."Building No_DSSS";
+                                BuildingNumber := CompanyInformation."E-Invoice Building No";
                             end;
 
                         }
@@ -854,7 +854,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             // 
                             begin
-                                PlotIdentification := CompanyInformation.Plot_Identification_DSSS;
+                                PlotIdentification := CompanyInformation."E-Invoice Plot_Identification";
                             end;
                         }
                         textelement(CitySubdivisionName)
@@ -864,7 +864,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             //
                             begin
-                                CitySubdivisionName := CompanyInformation."City_Subdivision_Name_DSSS";
+                                CitySubdivisionName := CompanyInformation."E-Invoice City_Subdivision_Name";
                             end;
                         }
                         textelement(CityName)
@@ -969,7 +969,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             // 
                             begin
-                                RegistrationName := CompanyInformation.Registration_Name_DSSS;
+                                RegistrationName := CompanyInformation."E-Invoice Registration_Name";
                             end;
                         }
                     }
@@ -1004,7 +1004,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             //
                             begin
-                                CustID := Customer_Rec."Scheme_ID_DSSS";
+                                CustID := Customer_Rec."E-Invoice Scheme_ID";
                             end;
                         }
                     }
@@ -1020,7 +1020,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             //
                             begin
-                                StreetNames := Customer_Rec."Street Name_DSSS";
+                                StreetNames := Customer_Rec."E-Invoice Street Name";
                             end;
                         }
                         // textelement(AdditionalStName)
@@ -1042,7 +1042,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             // 
                             begin
-                                BuildNumber := Customer_Rec."Building No_DSSS";
+                                BuildNumber := Customer_Rec."E-Invoice Building No";
                             end;
                         }
                         textelement(PlotIdentifi)
@@ -1053,7 +1053,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             //
                             begin
-                                PlotIdentifi := Customer_Rec.Plot_Identification_DSSS;
+                                PlotIdentifi := Customer_Rec."E-InvoicePlot_Identification";
                             end;
                         }
                         textelement(CitySubdivName)
@@ -1064,7 +1064,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             // 
                             begin
-                                CitySubdivName := Customer_Rec."City_Subdivision_Name_DSSS";
+                                CitySubdivName := Customer_Rec."E-Invoice City_Subdivision_Name";
                             end;
                         }
                         textelement(custCityName)
@@ -1140,7 +1140,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             var
                             // 
                             begin
-                                custCompanyID := Customer_Rec.Customer_ID_DSSS;
+                                custCompanyID := Customer_Rec."E-Invoice Customer_ID";
                             end;
                         }
                         textelement(CustTaxScheme)
@@ -1173,7 +1173,7 @@ xmlport 70503 "Tax Invoice Final XML DSSS"
                             //
                             begin
 
-                                CustRegistrationName := Customer_Rec.Registration_Name_DSSS;
+                                CustRegistrationName := Customer_Rec."E-Invoice Registration_Name";
                             end;
                         }
                     }

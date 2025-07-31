@@ -12,24 +12,24 @@ page 70501 "E-Invoicing Zatca Setup Info."
         {
             group("Azure Information")
             {
-                field(LegalEntity; Rec.LegalEntity)
+                field("E-Invoice LegalEntity"; Rec."E-Invoice LegalEntity")
                 {
                     ApplicationArea = All;
                 }
-                field(Organization; Rec.Organization)
+                field("E-Invoice Organization"; Rec."E-Invoice Organization")
                 {
                     ApplicationArea = All;
                 }
-                field("Storage Account Name"; Rec."Storage Account Name")
+                field("E-Invoice Storage Account Name"; Rec."E-Invoice Storage Account Name")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Access Key"; Rec."Storage Account Access Key")
+                field("E-Invoice Access Key"; Rec."E-Invoice Storage Account Access Key")
                 {
                     ApplicationArea = All;
                 }
-                field("Contaier Name"; Rec."Contaier Name")
+                field("E-Invoice Contaier Name"; Rec."E-Invoice Contaier Name")
                 {
                     ApplicationArea = All;
                 }
@@ -38,7 +38,7 @@ page 70501 "E-Invoicing Zatca Setup Info."
             group("HTTP Function Info")
             {
 
-                field("HTTP Triger func. URL"; Rec."HTTP Triger func. URL")
+                field("E-Invoice HTTP Triger func. URL"; Rec."E-Invoice HTTP Triger func. URL")
                 {
                     ApplicationArea = All;
                     Caption = 'Http Trigger URL';//we will use defult function key
@@ -47,115 +47,115 @@ page 70501 "E-Invoicing Zatca Setup Info."
             }
             group("Payload Setup")
             {
-                field("Simulation Production CSID"; Simulation_Production_CSID)
+                field("E-Invoice Simulation Production CSID"; Rec."E-Invoice Simulation Production CSID")
                 {
                     ApplicationArea = All;
                     Editable = true;
                     trigger OnValidate()
                     begin
-                        rec.SetCoreCertificateDescription1(Simulation_Production_CSID, Rec.FieldNo("Simulation Production CSID"));
+                        rec.SetCoreCertificateDescription1(Simulation_Production_CSID, Rec.FieldNo("E-Invoice Simulation Production CSID"));
                     end;
                 }
-                field("Core Production CSID"; Core_Production_CSID)
+                field("E-Invoice Core Production CSID"; Rec."E-Invoice Core Production CSID")
                 {
                     ApplicationArea = All;
                     trigger OnValidate()
                     begin
-                        Rec.SetCoreCertificateDescription1(Core_Production_CSID, Rec.FieldNo("Core Production CSID"));
+                        Rec.SetCoreCertificateDescription1(Core_Production_CSID, Rec.FieldNo("E-Invoice Core Production CSID"));
 
                     end;
                 }
 
-                field("Simulation Production Secret"; Simulation_Production_Secret)
+                field("E-Invoice Simulation Production Secret"; Rec."E-Invoice Simulation Production Secret")
                 {
                     ApplicationArea = All;
                     trigger OnValidate()
                     begin
-                        Rec.SetCoreCertificateDescription1(Simulation_Production_Secret, Rec.FieldNo("Simulation Production Secret"));
+                        Rec.SetCoreCertificateDescription1(Simulation_Production_Secret, Rec.FieldNo("E-Invoice Simulation Production Secret"));
                     end;
                 }
-                field("Core Production Secret"; Core_Production_Secret)
+                field("E-Invoice Core Production Secret"; Rec."E-Invoice Core Production Secret")
                 {
                     ApplicationArea = All;
                     trigger OnValidate()
                     begin
-                        rec.SetCoreCertificateDescription1(Core_Production_Secret, Rec.FieldNo("Core Production Secret"));
+                        rec.SetCoreCertificateDescription1(Core_Production_Secret, Rec.FieldNo("E-Invoice Core Production Secret"));
 
                     end;
                 }
                 group(Compliance)
                 {
-                    field("Simulation Compliance CSID"; Simulation_Compliance_CSID)
+                    field("E-Invoice Simulation Compliance CSID"; Rec."E-Invoice Simulation Compliance CSID")
                     {
                         ApplicationArea = All;
                         trigger OnValidate()
                         begin
-                            rec.SetCoreCertificateDescription1(Simulation_Compliance_CSID, Rec.FieldNo("Simulation Compliance CSID"));
+                            rec.SetCoreCertificateDescription1(Simulation_Compliance_CSID, Rec.FieldNo("E-Invoice Simulation Compliance CSID"));
 
                         end;
                     }
-                    field("Core Compliance CSID"; Core_Compliance_CSID)
+                    field("E-Invoice Core Compliance CSID"; Rec."E-Invoice Core Compliance CSID")
                     {
                         ApplicationArea = All;
 
                         trigger OnValidate()
 
                         begin
-                            rec.SetCoreCertificateDescription1(Core_Compliance_CSID, Rec.FieldNo("Core Compliance CSID"));
+                            rec.SetCoreCertificateDescription1(Core_Compliance_CSID, Rec.FieldNo("E-Invoice Core Compliance CSID"));
 
                         end;
                     }
-                    field("Simulation Compliance Secret"; Simulation_Compliance_Secret)
+                    field("E-Invoice Simulation Compliance Secret"; Rec."E-Invoice Simulation Compliance Secret")
                     {
                         ApplicationArea = All;
                         trigger OnValidate()
                         begin
-                            rec.SetCoreCertificateDescription1(Simulation_Compliance_Secret, Rec.FieldNo("Simulation Compliance Secret"));
+                            rec.SetCoreCertificateDescription1(Simulation_Compliance_Secret, Rec.FieldNo("E-Invoice Simulation Compliance Secret"));
 
                         end;
                     }
-                    field("Core Compliance Secret"; Core_Compliance_Secret)
+                    field("E-Invoice Core Compliance Secret"; Rec."E-Invoice Core Compliance Secret")
                     {
                         ApplicationArea = All;
                         trigger OnValidate()
                         begin
-                            rec.SetCoreCertificateDescription1(Core_Compliance_Secret, Rec.FieldNo("Core Compliance Secret"));
+                            rec.SetCoreCertificateDescription1(Core_Compliance_Secret, Rec.FieldNo("E-Invoice Core Compliance Secret"));
 
                         end;
                     }
-                    field("Simulation Private Key"; Simulation_Private_Key)
+                    field("E-Invoice Simulation Private Key"; Rec."E-Invoice Simulation Private Key")
                     {
                         ApplicationArea = All;
                         trigger OnValidate()
                         begin
-                            rec.SetCoreCertificateDescription1(Simulation_Private_Key, Rec.FieldNo("Simulation Private Key"));
+                            rec.SetCoreCertificateDescription1(Simulation_Private_Key, Rec.FieldNo("E-Invoice Simulation Private Key"));
 
                         end;
                     }
-                    field("Core Private Key"; Core_Private_Key)
+                    field("E-Invoice Core Private Key"; Rec."E-Invoice Core Private Key")
                     {
                         ApplicationArea = All;
                         trigger OnValidate()
                         begin
-                            rec.SetCoreCertificateDescription1(Core_Private_Key, Rec.FieldNo("Core Private Key"));
+                            rec.SetCoreCertificateDescription1(Core_Private_Key, Rec.FieldNo("E-Invoice Core Private Key"));
 
                         end;
                     }
-                    field("Simulation Certificate"; Simulation_Certificate)
+                    field("E-Invoice Simulation Certificate"; Rec."E-Invoice Simulation Certificate")
                     {
                         ApplicationArea = All;
                         trigger OnValidate()
                         begin
-                            rec.SetCoreCertificateDescription1(Simulation_Certificate, Rec.FieldNo("Simulation Certificate"));
+                            rec.SetCoreCertificateDescription1(Simulation_Certificate, Rec.FieldNo("E-Invoice Simulation Certificate"));
 
                         end;
                     }
-                    field("Core Certificate"; Core_Certificate)
+                    field("E-Invoice Core Certificate"; Rec."E-Invoice Core Certificate")
                     {
                         ApplicationArea = All;
                         trigger OnValidate()
                         begin
-                            rec.SetCoreCertificateDescription1(Core_Certificate, Rec.FieldNo("Core Certificate"));
+                            rec.SetCoreCertificateDescription1(Core_Certificate, Rec.FieldNo("E-Invoice Core Certificate"));
                         end;
                     }
 
@@ -163,12 +163,12 @@ page 70501 "E-Invoicing Zatca Setup Info."
             }
             group("Environment")
             {
-                field("ZATCA-Env. Sandbox"; Rec."ZATCA-Env. Simulation")
+                field("E-Invoice ZATCA-Env. Sandbox"; Rec."E-Invoice ZATCA-Env. Simulation")
                 {
                     ApplicationArea = All;
                 }
 
-                field("ZATCA-Env. Production"; Rec."ZATCA-Env. Production")
+                field("E-Invoice ZATCA-Env. Production"; Rec."E-Invoice ZATCA-Env. Production")
                 {
                     ApplicationArea = All;
                 }
@@ -225,18 +225,18 @@ page 70501 "E-Invoicing Zatca Setup Info."
     var
         myInt: Integer;
     begin
-        Simulation_Production_CSID := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Simulation Production CSID"));
-        Core_Compliance_Secret := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Core Compliance Secret"));
-        Core_Compliance_CSID := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Core Certificate"));
-        Core_Production_CSID := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Core Production CSID"));
-        Simulation_Compliance_CSID := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Simulation Compliance CSID"));
-        Simulation_Production_Secret := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Simulation Production Secret"));
-        Core_Production_Secret := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Core Production Secret"));
-        Core_Certificate := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Core Certificate"));
-        Simulation_Private_Key := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Simulation Private Key"));
+        Simulation_Production_CSID := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Simulation Production CSID"));
+        Core_Compliance_Secret := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Core Compliance Secret"));
+        Core_Compliance_CSID := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Core Certificate"));
+        Core_Production_CSID := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Core Production CSID"));
+        Simulation_Compliance_CSID := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Simulation Compliance CSID"));
+        Simulation_Production_Secret := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Simulation Production Secret"));
+        Core_Production_Secret := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Core Production Secret"));
+        Core_Certificate := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Core Certificate"));
+        Simulation_Private_Key := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Simulation Private Key"));
         // ZATCAEnvTxt := Rec.GetZATCAEnvDescription();
-        Simulation_Certificate := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Simulation Certificate"));
-        Core_Private_Key := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Core Private Key"));
-        Simulation_Compliance_Secret := Rec.GetCoreCertificateDescription1(Rec.FieldNo("Simulation Compliance Secret"));
+        Simulation_Certificate := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Simulation Certificate"));
+        Core_Private_Key := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Core Private Key"));
+        Simulation_Compliance_Secret := Rec.GetCoreCertificateDescription1(Rec.FieldNo("E-Invoice Simulation Compliance Secret"));
     end;
 }
