@@ -11,159 +11,159 @@ page 70500 "Zatca Company Info"
         {
             group(GroupName)
             {
-                field("E-Invoice Building No"; rec."E-Invoice Building No")
+                field("Building No_DSSS"; rec."Building No_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Building';
                 }
-                field("E-Invoice District"; rec."E-Invoice District")
+                field(District_DSSS; rec.District_DSSS)
                 {
                     ApplicationArea = all;
                     ToolTip = 'District';
 
                 }
-                field("E-Invoice Street Name"; rec."E-Invoice Street Name")
+                field("Street Name_DSSS"; rec."Street Name_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Street Name';
 
                 }
-                field("E-Invoice Additional No"; rec."E-Invoice Additional No")
+                field("Additional No_DSSS"; rec."Additional No_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Additional No';
 
                 }
-                field("E-Invoice Other Seller ID"; rec."E-Invoice Other Seller ID")
+                field("Other Seller ID_DSSS"; rec."Other Seller ID_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Other Seller ID';
 
                 }
-                field("E-Invoice Additional_Street_Name"; rec."E-Invoice Additional_Street_Name")
+                field(Additional_Street_Name_DSSS; rec.Additional_Street_Name_DSSS)
                 {
                     ApplicationArea = all;
                     ToolTip = 'Additional_Street_Name';
 
                 }
-                field("E-Invoice Plot_Identification"; rec."E-Invoice Plot_Identification")
+                field(Plot_Identification_DSSS; rec.Plot_Identification_DSSS)
                 {
                     ApplicationArea = all;
                     ToolTip = 'Plot_Identification';
 
                 }
-                field("E-Invoice Company_ID"; rec."E-Invoice Company_ID")
+                field(Company_ID_DSSS; rec.Company_ID_DSSS)
                 {
                     ApplicationArea = all;
                     ToolTip = 'Company_ID';
 
                 }
-                field("E-Invoice Registration_Name"; rec."E-Invoice Registration_Name")
+                field(Registration_Name_DSSS; rec.Registration_Name_DSSS)
                 {
                     ApplicationArea = all;
                     ToolTip = 'Registration_Name';
 
                 }
-                field("E-Invoice NeighbourHood"; rec."E-Invoice NeighbourHood")
+                field(NeighbourHood_DSSS; rec.NeighbourHood_DSSS)
                 {
                     ApplicationArea = All;
                     ToolTip = 'NeighbourHood';
 
                 }
-                field("E-Invoice Scheme_ID"; rec."E-Invoice Scheme_ID")
+                field(" Scheme_ID_DSSS"; rec."Scheme_ID_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = '                                                                                                                         ';
 
                 }
-                field("E-Invoice City_Subdivision_Name"; rec."E-Invoice City_Subdivision_Name")
+                field("  City_Subdivision_Name_DSSS"; rec."City_Subdivision_Name_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'City_Subdivision_Name';
 
                 }
-                field("E-Invoice Invoice Hash"; Rec."E-Invoice Invoice Hash")
+                field("Invoice Hash_DSSS"; Rec."Invoice Hash_DSSS")
                 {
                     ApplicationArea = all;
                     Editable = true;
                 }
             }
-            group("E-Invoice Arabic Information")
+            group("Arabic Information_DSSS")
             {
                 Caption = 'Arabic Information';
-                field("E-Invoice Arabic Name"; rec."E-Invoice Arabic Name")
+                field("Arabic Name_DSSS"; rec."Arabic Name_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic Information';
 
                 }
-                field("E-Invoice Arabic Street Name"; rec."E-Invoice Arabic Street Name")
+                field("Arabic Street Name_DSSS"; rec."Arabic Street Name_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic Street Name';
 
                 }
-                field("E-Invoice Add. Street_Name_Arabic"; Rec."E-Invoice Add. Street_Name_Arabic")
+                field("Add. Street_Name_Arabic_DSSS"; Rec."Add. Street_Name_Arabic_DSSS")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Add. Street_Name_Arabic';
 
                 }
-                field("E-Invoice Arabic Building No"; rec."E-Invoice Arabic Building No")
+                field("Arabic Building No_DSSS"; rec."Arabic Building No_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic Building No';
 
                 }
-                field("E-Invoice Arabic City"; rec."E-Invoice Arabic City")
+                field("Arabic City_DSSS"; rec."Arabic City_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic City';
 
                 }
-                field("E-Invoice Arabic District"; rec."E-Invoice Arabic District")
+                field("Arabic District_DSSS"; rec."Arabic District_DSSS")
                 {
                     ApplicationArea = all;
                     ToolTip = 'Arabic District';
 
                 }
-                field("E-Invoice Arabic Country"; rec."E-Invoice Arabic Country")
+                field("Arabic Country_DSSS"; rec."Arabic Country_DSSS")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic Country';
 
                 }
-                field("E-Invoice Arabic PostalCode"; rec."E-Invoice Arabic PostalCode")
+                field("Arabic PostalCode_DSSS"; rec."Arabic PostalCode_DSSS")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic PostalCode';
 
                 }
-                field("E-Invoice Arabic Additional No"; rec."E-Invoice Arabic Additional No")
+                field("Arabic Additional No_DSSS"; rec."Arabic Additional No_DSSS")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic Additional No';
 
                 }
-                field("E-Invoice Arabic VAT No"; rec."E-Invoice Arabic VAT No")
+                field("Arabic VAT No_DSSS"; rec."Arabic VAT No_DSSS")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic VAT No';
 
                 }
-                field("E-Invoice Arabic Other Seller ID"; rec."E-Invoice Arabic Other Seller ID")
+                field("Arabic Other Seller ID_DSSS"; rec."Arabic Other Seller ID_DSSS")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic Other Seller ID';
 
                 }
-                field("E-Invoice Arabic NeighbourHood"; rec."E-Invoice Arabic NeighbourHood")
+                field("Arabic NeighbourHood_DSSS"; rec."Arabic NeighbourHood_DSSS")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic NeighbourHood';
 
                 }
-                field("E-Invoice Arabic Plot_Iden"; rec."E-Invoice Arabic Plot_Iden")
+                field("Arabic Plot_Iden_DSSS"; rec."Arabic Plot_Iden_DSSS")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Arabic Plot_Iden';

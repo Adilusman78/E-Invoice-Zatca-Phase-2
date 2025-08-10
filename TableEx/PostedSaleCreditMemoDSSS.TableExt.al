@@ -2,33 +2,33 @@ tableextension 70505 "Posted Sale Credit Memo_DSSS" extends "Sales Cr.Memo Heade
 {
     fields
     {
-        field(50500; "E-Invoice Cleared By ZATCA"; Boolean)
+        field(70500; "E-Invoice Cleared By ZATCA"; Boolean)
         {
             Caption = 'Cleared By ZATCA';
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(50501; "E-Invoice ZATCA Clearance Status"; Text[35])
+        field(70501; "E-Invoice ZATCA Clearance Status"; Text[35])
         {
             Caption = 'ZATCA Clearance Status';
             DataClassification = CustomerContent;
             Editable = false;
         }
 
-        field(50502; "E-Invoice ZATCA Invoice Response"; Blob)
+        field(70502; "E-Invoice ZATCA Invoice Response"; Blob)
         {
             //Caption = 'ZATCA Invoice Response';
             DataClassification = CustomerContent;
         }
-        field(50503; "E-Invoice Pih Hash"; Text[250])
+        field(70503; "E-Invoice Pih Hash"; Text[250])
         {
             Caption = 'Pih Hash';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
-        field(50504; "E-Invoice ZATCA QR Code"; Text[2024])
+        field(70504; "E-Invoice ZATCA QR Code"; Text[2024])
         {
             Editable = false;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 

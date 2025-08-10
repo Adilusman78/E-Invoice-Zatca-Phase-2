@@ -3,32 +3,32 @@ tableextension 70506 SalesHeaderExt extends "Sales Header"
     fields
     {
         // Add changes to table fields here
-        field(50500; "E-Invoice Cleared By ZATCA"; Boolean)
+        field(70500; "E-Invoice Cleared By ZATCA"; Boolean)
         {
             Caption = 'E-Invoice Cleared By ZATCA';
             DataClassification = CustomerContent;
         }
-        field(50501; "E-Invoice Clearance Status"; Text[35])
+        field(70501; "E-Invoice Clearance Status"; Text[35])
         {
             Caption = 'E-Invoice ZATCA Clearance Status';
             DataClassification = CustomerContent;
         }
 
-        field(50502; "E-Invoice ZATCA Response"; Blob)
+        field(70502; "E-Invoice ZATCA Response"; Blob)
         {
             Caption = 'E-Invoice ZATCA Response';
             DataClassification = CustomerContent;
         }
-        field(50503; "E-Invoice ZATCA Pih Hash"; Text[250])
+        field(70503; "E-Invoice ZATCA Pih Hash"; Text[250])
         {
             Caption = 'E-Invoice ZATCA Pih Hash';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
         }
-        field(50504; "E-Invoice ZATCA QR Code"; Text[2024])
+        field(70504; "E-Invoice ZATCA QR Code"; Text[2024])
         {
             Editable = false;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 

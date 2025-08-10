@@ -3,39 +3,39 @@ tableextension 70504 "Posted Sales Invoice_DSSS" extends "Sales Invoice Header"
 
     fields
     {
-        field(50500; "E-Invoice Cleared By ZATCA"; Boolean)
+        field(70500; "E-Invoice Cleared By ZATCA"; Boolean)
         {
             Caption = 'E-Invoice Cleared By ZATCA';
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(50501; "E-Invoice ZATCA Clearance Status"; Text[35])
+        field(70501; "E-Invoice ZATCA Clearance Status"; Text[35])
         {
             Caption = 'E-Invoice ZATCA Clearance Status';
             DataClassification = CustomerContent;
             Editable = false;
         }
 
-        field(50502; "E-Invoice ZATCA Invoice Response"; Blob)
+        field(70502; "E-Invoice ZATCA Invoice Response"; Blob)
         {
             //Caption = 'E-Invoice ZATCA Invoice Response';
             DataClassification = CustomerContent;
         }
-        field(50503; "E-Invoice Pih Hash"; Text[250])
+        field(70503; "E-Invoice Pih Hash"; Text[250])
         {
             Caption = 'E-Invoice Pih Hash';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
         }
-        field(50504; "E-Invoice ZATCA QR Code"; Text[2024])
+        field(70504; "E-Invoice ZATCA QR Code"; Text[2024])
         {
             Editable = false;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
-        field(50505; "E-Invoice QR Code Media"; MediaSet)
+        field(70505; "E-Invoice QR Code Media"; MediaSet)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
     }

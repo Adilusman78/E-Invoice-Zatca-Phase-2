@@ -6,103 +6,103 @@ table 70502 "E-Invoicing Zatca Setup"
     {
         field(70501; "E-Invoice Storage Account Name"; Code[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70502; "E-Invoice Contaier Name"; Code[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70503; "E-Invoice Storage Account Access Key"; Text[2024])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70504; "E-Invoice HTTP Triger func. URL"; Text[2024])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70505; "E-Invoice ZATCA-Core URL"; Text[2024])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70506; "E-Invoice ZATCA-Simulation URL"; Text[2024])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70507; "E-Invoice ZATCA-File Name"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70508; "E-Invoice ZATCA-Env. Simulation"; Text[2024])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70509; "E-Invoice ZATCA-Env. Production"; Text[2024])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70510; "E-Invoice Simulation Production CSID"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
         }
         field(70511; "E-Invoice Core Production CSID"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70512; "E-Invoice Simulation Production Secret"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70513; "E-Invoice Core Production Secret"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70514; "E-Invoice Simulation Compliance CSID"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70515; "E-Invoice Core Compliance CSID"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70516; "E-Invoice Simulation Compliance Secret"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70517; "E-Invoice Core Compliance Secret"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70518; "E-Invoice Simulation Private Key"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70519; "E-Invoice Core Private Key"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70520; "E-Invoice Simulation Certificate"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70521; "E-Invoice Core Certificate"; Blob)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
 
         field(70522; "E-Invoice Organization"; Code[100])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             //  TableRelation = "Company Information".Name;
         }
         field(70523; "E-Invoice LegalEntity"; Code[250])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(70524; "E-Invoice PI Hash"; Text[250])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Previous Invoice Hash';
         }
 

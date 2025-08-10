@@ -2,95 +2,95 @@ tableextension 70501 "Customer DSSS" extends Customer
 {
     fields
     {
-        field(50501; "E-Invoice Building No"; Text[30])
+        field(70500; "E-Invoice Building No"; Text[30])
 
         {
             Caption = 'Building No';
             DataClassification = CustomerContent;
         }
-        field(50502; "E-Invoice Street Name"; Text[50])
+        field(70501; "E-Invoice Street Name"; Text[50])
         {
             Caption = 'Street Name';
             DataClassification = CustomerContent;
         }
-        field(50503; "E-Invoice District"; text[50])
+        field(70502; "E-Invoice District"; text[50])
         {
             Caption = 'District';
             DataClassification = CustomerContent;
         }
-        field(50504; "E-Invoice Arabic Building No"; Text[30])
+        field(70503; "E-Invoice Arabic Building No"; Text[30])
 
         {
             Caption = 'لا للبناء';
             DataClassification = CustomerContent;
         }
-        field(50505; "E-Invoice Arabic Street Name"; Text[50])
+        field(70504; "E-Invoice Arabic Street Name"; Text[50])
         {
             Caption = 'اسم الشارع';
             DataClassification = CustomerContent;
         }
-        field(50506; "E-Invoice Arabic District"; text[50])
+        field(70505; "E-Invoice Arabic District"; text[50])
         {
             Caption = 'يصرف';
             DataClassification = CustomerContent;
         }
-        field(50507; "E-Invoice Arabic City"; Text[30])
+        field(70506; "E-Invoice Arabic City"; Text[30])
         {
             Caption = 'مدينة';
             DataClassification = CustomerContent;
         }
-        field(50508; "E-Invoice Arabic Name"; Text[100])
+        field(70507; "E-Invoice Arabic Name"; Text[100])
         {
             Caption = 'اسم';
             DataClassification = CustomerContent;
         }
-        field(50509; "E-Invoice Additional No"; Text[30])
+        field(70508; "E-Invoice Additional No"; Text[30])
         {
             Caption = 'Additional No';
             DataClassification = CustomerContent;
         }
-        field(50510; "E-Invoice Other Buyer ID"; Text[30])
+        field(70509; "E-Invoice Other Buyer ID"; Text[30])
         {
             Caption = 'Other Buyer ID';
             DataClassification = CustomerContent;
 
         }
-        field(50511; "E-Invoice Additional_Street_Name"; Text[50])
+        field(70510; "E-Invoice Additional_Street_Name"; Text[50])
         {
             Caption = 'Additional Street Name';
             DataClassification = CustomerContent;
 
         }
-        field(50512; "E-InvoicePlot_Identification"; Text[50])
+        field(70511; "E-InvoicePlot_Identification"; Text[50])
         {
             Caption = 'Plot Identification';
             DataClassification = CustomerContent;
 
         }
-        field(50513; "E-Invoice Customer_ID"; Text[50])
+        field(70512; "E-Invoice Customer_ID"; Text[50])
         {
             Caption = 'Company ID';
             DataClassification = CustomerContent;
 
         }
-        field(50514; "E-Invoice Registration_Name"; Text[50])
+        field(70513; "E-Invoice Registration_Name"; Text[50])
         {
             Caption = 'Registration Name';
             DataClassification = CustomerContent;
 
         }
-        field(50515; "E-Invoice Scheme_ID"; Text[50])
+        field(70514; "E-Invoice Scheme_ID"; Text[50])
         {
             Caption = 'Scheme ID';
             DataClassification = CustomerContent;
 
         }
-        field(50516; "E-Invoice City_Subdivision_Name"; Text[50])
+        field(70515; "E-Invoice City_Subdivision_Name"; Text[50])
         {
             Caption = 'City Subdivision';
             DataClassification = CustomerContent;
         }
-        field(50517; "E-Invoice Add. Street_Name_Arabic"; Text[50])
+        field(70516; "E-Invoice Add. Street_Name_Arabic"; Text[50])
         {
             Caption = 'شارع إضافي';
             DataClassification = CustomerContent;
