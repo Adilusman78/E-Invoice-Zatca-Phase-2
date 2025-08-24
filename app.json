@@ -3,7 +3,6 @@
   "name": "E-Invoicing-KSA",
   "publisher": "Dynamics 365 Zone",
   "version": "1.0.0.0",
-
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
@@ -19,8 +18,6 @@
     "allowDownloadingSource": false,
     "includeSourceInSymbolFile": false
   },
-  "runtime": "9.0",
-  "features": [
-    "NoImplicitWith"
-  ]
+  "runtime": "9.0"
+
 }
