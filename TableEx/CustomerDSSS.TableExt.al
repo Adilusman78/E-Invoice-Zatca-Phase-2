@@ -95,53 +95,53 @@ tableextension 70501 "Customer DSSS" extends Customer
             Caption = 'شارع إضافي';
             DataClassification = CustomerContent;
         }
-        field(50518; "E-Invoice Arabic Country"; Text[30])
+        field(70517; "E-Invoice Arabic Country"; Text[30])
         {
             Caption = 'البلد';
             DataClassification = CustomerContent;
         }
-        field(50519; "E-Invoice Arabic PostalCode"; Text[30])
+        field(70518; "E-Invoice Arabic PostalCode"; Text[30])
         {
             Caption = 'الرمز البريدي';
             DataClassification = CustomerContent;
         }
-        field(50520; "E-Invoice Arabic Additional No"; Text[30])
+        field(70519; "E-Invoice Arabic Additional No"; Text[30])
         {
             Caption = 'الرقم إضافي للعنوان';
             DataClassification = CustomerContent;
         }
-        field(50521; "E-Invoice Arabic VAT No"; Text[20])
+        field(70520; "E-Invoice Arabic VAT No"; Text[20])
         {
             Caption = 'رقم تسجيل ضريبة القيمة المضافة';
             DataClassification = CustomerContent;
         }
-        field(50522; "E-Invoice Arabic Other Buyer ID"; Text[30])
+        field(70521; "E-Invoice Arabic Other Buyer ID"; Text[30])
         {
             Caption = 'معرف آخر';
             DataClassification = CustomerContent;
 
         }
-        field(50123; "E-Invoice NeighbourHood"; Text[100])
+        field(70522; "E-Invoice NeighbourHood"; Text[100])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'NeighbourHood';
         }
 
-        field(50124; "E-Invoice Arabic NeighbourHood"; Text[100])
+        field(70523; "E-Invoice Arabic NeighbourHood"; Text[100])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'حي';
         }
-        field(50525; "E-Invoice Arabic Plot_Iden"; Text[50])
+        field(70525; "E-Invoice Arabic Plot_Iden"; Text[50])
         {
             Caption = 'التحديد المؤامرة';
             DataClassification = CustomerContent;
 
         }
-        field(50158; "E-Invoice Company Type"; Option)
+        field(70524; "E-Invoice Company Type"; Option)
         {
             OptionMembers = "Individual","Company";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
     }
